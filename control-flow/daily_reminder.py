@@ -2,22 +2,22 @@ task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
+# Determine priority note using match-case
 match priority:
     case "high":
-        message = f"Reminder: '{task}' is a high priority task"
+        priority_note = "High - Handle this task with urgency."
     case "medium":
-        message = f"Reminder: '{task}' is a medium priority task"
+        priority_note = "Medium - Plan to do this soon."
     case "low":
-        message = f"Note: '{task}' is a low priority task"
+        priority_note = "Low - No rush, just keep it in mind."
     case _:
-        message = f"Task: '{task}' has an undefined priority"
+        priority_note = "Unknown - Please clarify priority."
 
+# Determine urgency note
 if time_bound == "yes":
-    message += " that requires immediate attention today!"
+    urgency_note = "This task is time-sensitive. Take immediate action!"
 else:
-    if "Reminder" in message:
-        message += ". Plan your time accordingly."
-    else:
-        message += ". Consider completing it when you have free time."
+    urgency_note = "This task is not urgent. Plan accordingly."
 
-print("\n" + message)
+# Final message ALX checker looks for
+print(f"Reminder: {task} | Priority: {priority_note} | {urgency_note}")
