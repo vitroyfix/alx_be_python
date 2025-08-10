@@ -1,5 +1,4 @@
-# alx_be_python/oop/book_class.py
-
+# alxcat > book_class.py << 'EOF'
 class Book:
     def __init__(self, title: str, author: str, year: int):
         self.title = title
@@ -14,3 +13,4 @@ class Book:
 
     def __repr__(self):
         return f"Book('{self.title}', '{self.author}', {self.year})"
+EOF

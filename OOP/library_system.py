@@ -1,5 +1,4 @@
-# alx_be_python/oop/library_system.py
-
+cat > library_system.py << 'EOF'
 class Book:
     def __init__(self, title: str, author: str):
         self.title = title
@@ -37,3 +36,4 @@ class Library:
     def list_books(self):
         for book in self.books:
             print(book)
+EOF

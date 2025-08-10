@@ -1,4 +1,4 @@
-# alx_be_python/oop/polymorphism_demo.py
+cat > polymorphism_demo.py << 'EOF'
 import math
 
 class Shape:
@@ -21,3 +21,4 @@ class Circle(Shape):
 
     def area(self):
         return math.pi * (self.radius ** 2)
+EOF
