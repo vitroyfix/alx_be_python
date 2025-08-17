@@ -1,4 +1,3 @@
-cat > class_static_methods_demo.py << 'EOF'
 class Calculator:
     calculation_type = "Arithmetic Operations"
 
@@ -10,4 +9,3 @@ class Calculator:
     def multiply(cls, a, b):
         print(f"Calculation type: {cls.calculation_type}")
         return a * b
-EOF
